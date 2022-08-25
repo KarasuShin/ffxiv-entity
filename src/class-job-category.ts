@@ -4,10 +4,10 @@ import { ClassJobEntity } from './class-job'
 @Entity('class_job_category')
 export class ClassJobCategoryEntity {
   @PrimaryColumn({ type: 'int' })
-  id: string
+  id: number
 
   @Column('varchar', { length: 255 })
-  name: string
+  nameHans: string
 
   @Column('bool', { default: false })
   ADV: boolean

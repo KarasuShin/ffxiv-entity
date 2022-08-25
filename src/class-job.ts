@@ -4,11 +4,11 @@ import { ClassJobCategoryEntity } from './class-job-category'
 
 @Entity('class_job')
 export class ClassJobEntity {
-  @PrimaryColumn({ type: 'varchar' })
-  id: string
+  @PrimaryColumn({ type: 'int' })
+  id: number
 
   @Column('varchar', { length: 8 })
-  nameCn: string
+  nameHans: string
 
   @Column('varchar', { length: 32 })
   nameEn: string

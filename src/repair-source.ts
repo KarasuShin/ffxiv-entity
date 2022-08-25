@@ -3,8 +3,8 @@ import { ItemEntity } from './item'
 
 @Entity('repair_source')
 export class RepairSourceEntity {
-  @PrimaryColumn({ type: 'varchar' })
-  id: string
+  @PrimaryColumn({ type: 'int' })
+  id: number
 
   @OneToOne(() => ItemEntity)
   @JoinColumn()

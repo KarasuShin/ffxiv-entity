@@ -3,8 +3,8 @@ import { RepairSourceEntity } from './repair-source'
 
 @Entity('item', {})
 export class ItemEntity {
-  @PrimaryColumn({ type: 'varchar' })
-  id: string
+  @PrimaryColumn({ type: 'int' })
+  id: number
 
   @Column('int', { comment: '以太消耗' })
   aetherialReduce: number
