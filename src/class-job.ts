@@ -17,7 +17,7 @@ export class ClassJobEntity {
   abbreviationEn: string
 
   @Column('varchar', { length: 1 })
-  abbreviationCn: string
+  abbreviationHans: string
 
   @ManyToOne(() => ClassJobCategoryEntity, classJobCategory => classJobCategory.classJob)
   classJobCategory: ClassJobCategoryEntity
