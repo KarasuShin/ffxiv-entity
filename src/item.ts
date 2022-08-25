@@ -1,4 +1,7 @@
-import { Column, Entity, OneToOne, PrimaryColumn } from 'typeorm'
+import { Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryColumn } from 'typeorm'
+import { ClassJobEntity } from './class-job'
+import { GrandCompanyEntity } from './grand-company'
+import { ItemSeriesEntity } from './item-series'
 import { RepairSourceEntity } from './repair-source'
 
 @Entity('item', {})
@@ -6,7 +9,7 @@ export class ItemEntity {
   @PrimaryColumn({ type: 'int' })
   id: number
 
-  @Column('int', { comment: '以太消耗' })
+  @Column('int', { default: 0 })
   aetherialReduce: number
 
   @Column('bool', { default: false })
@@ -21,7 +24,7 @@ export class ItemEntity {
   @Column('varchar', { length: 128, nullable: true })
   description: string
 
-  @Column('tinyint')
+  @Column('int', { default: 0 })
   equipRestriction: number
 
   @Column('int', { nullable: true })
@@ -29,6 +32,9 @@ export class ItemEntity {
 
   @Column('varchar', { length: 32, nullable: true })
   iconUrl: string
+
+  @Column('bool', { default: false })
+  isAdvancedMeldingPermitted: boolean
 
   @Column('bool', { default: false })
   isAlwaysCollectable: boolean
@@ -40,16 +46,22 @@ export class ItemEntity {
   isDyeable: boolean
 
   @Column('bool', { default: false })
+  isIndisposable: boolean
+
+  @Column('bool', { default: false })
+  isGlamourous: boolean
+
+  @Column('bool', { default: false })
+  isLot: boolean
+
+  @Column('bool', { default: false })
+  isPvP: boolean
+
+  @Column('bool', { default: false })
   isUnique: boolean
 
   @Column('bool', { default: false })
   isUntradable: boolean
-
-  @Column('bool', { default: false })
-  isIndisposable: boolean
-
-  @Column('bool', { default: false })
-  isLot: boolean
 
   @Column('int', { default: 0 })
   levelItem: number
@@ -71,4 +83,32 @@ export class ItemEntity {
 
   @OneToOne(() => RepairSourceEntity, { nullable: true })
   repairSource: RepairSourceEntity
+
+  @Column('int', { default: 0 })
+  stackSize: number
+
+  @ManyToOne(() => ItemSeriesEntity, itemSeries => itemSeries.items, { nullable: true })
+  itemSeries: ItemSeriesEntity
+
+  @ManyToOne(() => GrandCompanyEntity, grandCompanyEntity => grandCompanyEntity.items)
+  grandCompany: GrandCompanyEntity
+
+  @OneToOne(() => ClassJobEntity)
+  @JoinColumn()
+  classJobUse: ClassJobEntity
+
+  @Column('int', { default: 0 })
+  damagePhys: number
+
+  @Column('int', { default: 0 })
+  damageMag: number
+
+  @Column('int', { default: 0 })
+  defensePhys: number
+
+  @Column('int', { default: 0 })
+  defenseMag: number
+
+  @Column('int', { default: 0 })
+  delay: number
 }
