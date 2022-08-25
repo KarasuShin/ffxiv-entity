@@ -1,6 +1,7 @@
 # ffxiv-entity
 
-[![NPM version](https://img.shields.io/npm/v/ffxiv-entity?color=a1b858&label=)](https://www.npmjs.com/package/ffxiv-entity)
+[![LICENSE](https://img.shields.io/npm/l/ffxiv-entity?color=blue)](./LICENSE)
+[![NPM version](https://img.shields.io/npm/v/ffxiv-entity?color=a1b858)](https://www.npmjs.com/package/ffxiv-entity)
 
 开箱即用的Typeorm实体类，与[ffxiv-db-sync](https://github.com/KarasuShin/ffxiv-db-sync)搭配使用，帮助你更方便的构建ffxiv相关的web应用
 
