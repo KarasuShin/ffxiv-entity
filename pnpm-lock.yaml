@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@karasushin/eslint-config': ^0.1.8
+  '@karasushin/eslint-config': ^0.1.9
   '@types/node': ^18.7.5
   bumpp: ^8.2.1
   eslint: ^8.22.0
@@ -14,7 +14,7 @@ dependencies:
   typeorm: 0.3.7
 
 devDependencies:
-  '@karasushin/eslint-config': 0.1.8_4rv7y5c6xz3vfxwhbrcxxi73bq
+  '@karasushin/eslint-config': 0.1.9_4rv7y5c6xz3vfxwhbrcxxi73bq
   '@types/node': 18.7.12
   bumpp: 8.2.1
   eslint: 8.22.0
@@ -332,8 +332,8 @@ packages:
       type-detect: 4.0.8
     dev: true
 
-  /@karasushin/eslint-config-basic/0.1.8_7brzdshgayqbw436k7te6ew6oy:
-    resolution: {integrity: sha512-yZXQEB5r5u6thUixRdMGfoHfkmQnMyf/D13eGzo33a9YG92KjEP2EVFBbTquRsKMnXNmMjRntjZEs9MaQKGwNw==}
+  /@karasushin/eslint-config-basic/0.1.9_7brzdshgayqbw436k7te6ew6oy:
+    resolution: {integrity: sha512-dexPFAouXlm/w95QoodtO9gj+njs4rRyqL37e8WqKa8v2E1acUd0DGtZUB1DaFTWzBdKjGy7tKiHBxBUIwercQ==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
@@ -353,12 +353,12 @@ packages:
       - supports-color
     dev: true
 
-  /@karasushin/eslint-config-react/0.1.8_4rv7y5c6xz3vfxwhbrcxxi73bq:
-    resolution: {integrity: sha512-BgAkkKbl0bO8KSsIdLR/3pYqmJjIuzjok/ndWg5FUV16oUiFno2LGM/urUtBfwn9WKLu9WRg1waUm5+z52Z6Mw==}
+  /@karasushin/eslint-config-react/0.1.9_4rv7y5c6xz3vfxwhbrcxxi73bq:
+    resolution: {integrity: sha512-K7OFJ4TylgeDgRmb8XCnHgnVutgTBT+0CDHPVF14FGUCjm2OlC4Ut2IPXeFJjS4vBIT/c9s9GE6coLtNwXVrwA==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@karasushin/eslint-config-typescript': 0.1.8_4rv7y5c6xz3vfxwhbrcxxi73bq
+      '@karasushin/eslint-config-typescript': 0.1.9_4rv7y5c6xz3vfxwhbrcxxi73bq
       eslint: 8.22.0
       eslint-plugin-react: 7.30.1_eslint@8.22.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.22.0
@@ -369,13 +369,13 @@ packages:
       - typescript
     dev: true
 
-  /@karasushin/eslint-config-typescript/0.1.8_4rv7y5c6xz3vfxwhbrcxxi73bq:
-    resolution: {integrity: sha512-VzjXZPWtgyp4I24mAgkL+OkOBO+Ol0uFzBos0kO14vl5gRibETWmyGJ76cDy7IBAv+bvb8z//XX5qEnWV5UqaQ==}
+  /@karasushin/eslint-config-typescript/0.1.9_4rv7y5c6xz3vfxwhbrcxxi73bq:
+    resolution: {integrity: sha512-0JdCQiMcLabcKvqzpKMot9hGKjfFEedwrMZ/a+cGISvnTZU1T5d13IWjB25+FAulymgf/iu+Onr3ULW6+c5ODg==}
     peerDependencies:
       eslint: '>=7.4.0'
       typescript: '>=3.9'
     dependencies:
-      '@karasushin/eslint-config-basic': 0.1.8_7brzdshgayqbw436k7te6ew6oy
+      '@karasushin/eslint-config-basic': 0.1.9_7brzdshgayqbw436k7te6ew6oy
       '@typescript-eslint/eslint-plugin': 5.34.0_euudt5oqhhodkyae5tf6wjmsda
       '@typescript-eslint/parser': 5.34.0_4rv7y5c6xz3vfxwhbrcxxi73bq
       eslint: 8.22.0
@@ -386,12 +386,12 @@ packages:
       - supports-color
     dev: true
 
-  /@karasushin/eslint-config-vue/0.1.8_4rv7y5c6xz3vfxwhbrcxxi73bq:
-    resolution: {integrity: sha512-8NhOHjAbBFwuodEij7wgr6FElGlM4PQAnOZmI9kE6F4vE8GURvLOl5NA2HW3CLmpVfUjl5G7P3++CjfFr+aW+w==}
+  /@karasushin/eslint-config-vue/0.1.9_4rv7y5c6xz3vfxwhbrcxxi73bq:
+    resolution: {integrity: sha512-al3RWpBlNwSb40LX3tfjUAGhLv+ELPZ7bm6qu9CHRlHJQU5kGHPIJeRw97iuD/OeQaOIF7sVxN8va+eeYJeA4A==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@karasushin/eslint-config-typescript': 0.1.8_4rv7y5c6xz3vfxwhbrcxxi73bq
+      '@karasushin/eslint-config-typescript': 0.1.9_4rv7y5c6xz3vfxwhbrcxxi73bq
       eslint: 8.22.0
       eslint-plugin-vue: 9.4.0_eslint@8.22.0
     transitivePeerDependencies:
@@ -401,11 +401,11 @@ packages:
       - typescript
     dev: true
 
-  /@karasushin/eslint-config/0.1.8_4rv7y5c6xz3vfxwhbrcxxi73bq:
-    resolution: {integrity: sha512-sDN8IjARaLDFfsaqvdD1M6Xlv6DlvSJTG2wE9mbg9xTA+qOI3f0FxhiPta1JPE1RADINZHTChSOLhRYEt6nUKQ==}
+  /@karasushin/eslint-config/0.1.9_4rv7y5c6xz3vfxwhbrcxxi73bq:
+    resolution: {integrity: sha512-s1mVsKQJ3bEhp8/A+Kfw460h0fS3Zrd5hLnC7+p2luE4POrWvlcRWdIBlmVqFDReeACGKElG6ZoCFqe7vvahBw==}
     dependencies:
-      '@karasushin/eslint-config-react': 0.1.8_4rv7y5c6xz3vfxwhbrcxxi73bq
-      '@karasushin/eslint-config-vue': 0.1.8_4rv7y5c6xz3vfxwhbrcxxi73bq
+      '@karasushin/eslint-config-react': 0.1.9_4rv7y5c6xz3vfxwhbrcxxi73bq
+      '@karasushin/eslint-config-vue': 0.1.9_4rv7y5c6xz3vfxwhbrcxxi73bq
     transitivePeerDependencies:
       - eslint
       - eslint-import-resolver-typescript
