@@ -3,7 +3,7 @@ import { ClassJobCategoryEntity } from './class-job-category'
 import { ItemEntity } from './item'
 import { ItemSeriesEntity } from './item-series'
 import { GrandCompanyEntity } from './grand-company'
-import { RepairSourceEntity } from './repair-source'
+import { ItemRepairResourceEntity } from './item-repair-resource'
 
 const entities = [
   ClassJobCategoryEntity,
@@ -11,7 +11,7 @@ const entities = [
   ItemEntity,
   ItemSeriesEntity,
   GrandCompanyEntity,
-  RepairSourceEntity,
+  ItemRepairResourceEntity,
 ]
 
 export {
@@ -20,7 +20,7 @@ export {
   ItemEntity,
   ItemSeriesEntity,
   GrandCompanyEntity,
-  RepairSourceEntity,
+  ItemRepairResourceEntity,
 }
 
 export default entities
