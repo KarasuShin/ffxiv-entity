@@ -1,5 +1,5 @@
 import { ItemEntity } from './item'
-import { Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryColumn } from 'typeorm'
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryColumn } from 'typeorm'
 import { ClassJobCategoryEntity } from './class-job-category'
 
 @Entity('class_job')
@@ -52,4 +52,7 @@ export class ClassJobEntity {
   @OneToOne(() => ItemEntity, { nullable: true })
   @JoinColumn()
   startingWeapon: ItemEntity
+
+  @OneToMany(() => ItemEntity, item => item.classJobUse)
+  items: ItemEntity[]
 }

@@ -1,8 +1,9 @@
-import { Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryColumn } from 'typeorm'
+import { Column, Entity, ManyToOne, PrimaryColumn } from 'typeorm'
 import { ClassJobEntity } from './class-job'
+import { ClassJobCategoryEntity } from './class-job-category'
 import { GrandCompanyEntity } from './grand-company'
 import { ItemSeriesEntity } from './item-series'
-import { RepairSourceEntity } from './repair-source'
+import { ItemRepairResourceEntity } from './item-repair-resource'
 
 @Entity('item', {})
 export class ItemEntity {
@@ -21,17 +22,14 @@ export class ItemEntity {
   @Column('int', { default: 0 })
   cooldown: number
 
-  @Column('varchar', { length: 128, nullable: true })
+  @Column('varchar', { length: 255, nullable: true })
   description: string
 
   @Column('int', { default: 0 })
   equipRestriction: number
 
-  @Column('int', { nullable: true })
-  iconId: number
-
-  @Column('varchar', { length: 32, nullable: true })
-  iconUrl: string
+  @Column('varchar', { length: 6 })
+  iconId: string
 
   @Column('bool', { default: false })
   isAdvancedMeldingPermitted: boolean
@@ -70,7 +68,7 @@ export class ItemEntity {
   levelEquip: number
 
   @Column('varchar', { length: 64, nullable: false })
-  name: string
+  nameHans: string
 
   @Column('int', { default: 0 })
   priceLow: number
@@ -81,9 +79,6 @@ export class ItemEntity {
   @Column('tinyint', { default: 0 })
   rarity: number
 
-  @OneToOne(() => RepairSourceEntity, { nullable: true })
-  repairSource: RepairSourceEntity
-
   @Column('int', { default: 0 })
   stackSize: number
 
@@ -93,8 +88,7 @@ export class ItemEntity {
   @ManyToOne(() => GrandCompanyEntity, grandCompanyEntity => grandCompanyEntity.items)
   grandCompany: GrandCompanyEntity
 
-  @OneToOne(() => ClassJobEntity)
-  @JoinColumn()
+  @ManyToOne(() => ClassJobEntity, classJobUse => classJobUse.items)
   classJobUse: ClassJobEntity
 
   @Column('int', { default: 0 })
@@ -111,4 +105,10 @@ export class ItemEntity {
 
   @Column('int', { default: 0 })
   delay: number
+
+  @ManyToOne(() => ClassJobCategoryEntity, classJobCategory => classJobCategory.item)
+  classJobCategory: ClassJobCategoryEntity
+
+  @ManyToOne(() => ItemRepairResourceEntity, itemRepairResourceEntity => itemRepairResourceEntity.item)
+  itemRepairResource: ItemRepairResourceEntity
 }
