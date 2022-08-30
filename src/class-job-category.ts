@@ -1,5 +1,6 @@
 import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm'
 import { ClassJobEntity } from './class-job'
+import { ItemEntity } from './item'
 
 @Entity('class_job_category')
 export class ClassJobCategoryEntity {
@@ -134,4 +135,7 @@ export class ClassJobCategoryEntity {
 
   @OneToMany(() => ClassJobEntity, classJob => classJob.classJobCategory)
   classJob: ClassJobEntity[]
+
+  @OneToMany(() => ItemEntity, item => item.classJobCategory)
+  item: ItemEntity[]
 }
